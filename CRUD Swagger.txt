@@ -1,0 +1,28 @@
+Insert new Person:
+
+curl -X POST "http://192.168.72.2:8080/api/person" -H "accept: */*" -H "Content-Type: application/json" 
+-d "{ \"address\": { \"city\": \"string\", \"country\": \"string\", \"number\": 0, \"postcode\": \"string\",
+ \"street\": \"string\" }, \"age\": 0, \"cars\": [ { \"brand\": \"string\", \"maxSpeedKmH\": 0, \"model\":
+ \"string\" } ], \"createdAt\": \"2021-01-12T12:18:17.397Z\", \"firstName\": \"string\", \"id\": { \"counter\": 0,
+ \"date\": \"2021-01-12T12:18:17.397Z\", \"machineIdentifier\": 0, \"processIdentifier\": 0, \"time\": 0,
+ \"timeSecond\": 0, \"timestamp\": 0 }, \"insurance\": true, \"lastName\": \"string\"}"
+
+
+Edit Person
+
+curl -X PUT "http://192.168.72.2:8080/api/person" -H "accept: */*" -H "Content-Type: application/json" 
+-d "{ \"address\": { \"city\": \"string\", \"country\": \"string\", \"number\": 0, \"postcode\": \"string\",
+ \"street\": \"string\" }, \"age\": 0, \"cars\": [ { \"brand\": \"string\", \"maxSpeedKmH\": 0, \"model\": \"string\" } ],
+ \"createdAt\": \"2021-01-12T13:13:17.115Z\", \"firstName\": \"string\", \"id\": { \"counter\": 0, \"date\":
+ \"2021-01-12T13:13:17.115Z\", \"machineIdentifier\": 0, \"processIdentifier\": 0, \"time\": 0, \"timeSecond\": 0,
+ \"timestamp\": 0 }, \"insurance\": true, \"lastName\": \"string\"}"
+
+
+Read Person
+
+curl -X GET "http://192.168.72.2:8080/api/person/1" -H "accept: */*"
+
+
+Delete Person
+
+curl -X DELETE "http://192.168.72.2:8080/api/person/1" -H "accept: */*"
