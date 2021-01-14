@@ -1,0 +1,226 @@
+[{
+  "_id": {
+    "$oid": "5ffc24f1ea532f45699d050d"
+  },
+  "address": {
+    "city": "Paris",
+    "country": "France",
+    "number": 1,
+    "postcode": "12345",
+    "street": "The Best Street"
+  },
+  "age": 32,
+  "cars": [
+    {
+      "brand": "Ferrari",
+      "maxSpeedKmH": 339,
+      "model": "SF90 Stradale"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-11T10:14:09.933Z"
+  },
+  "firstName": "Maxime",
+  "insurance": false,
+  "lastName": "Beugnet"
+},{
+  "_id": {
+    "$oid": "5ffc24f2ea532f45699d050e"
+  },
+  "address": {
+    "city": "Toulouse",
+    "country": "France",
+    "number": 2,
+    "postcode": "54321",
+    "street": "Another Street"
+  },
+  "age": 27,
+  "cars": [
+    {
+      "brand": "Mercedes",
+      "maxSpeedKmH": 355,
+      "model": "Project One"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-11T10:14:10.055Z"
+  },
+  "firstName": "Alex",
+  "insurance": false,
+  "lastName": "Beugnet"
+},{
+  "_id": {
+    "$oid": "5ffc24f2ea532f45699d050f"
+  },
+  "address": {
+    "city": "Paris",
+    "country": "France",
+    "number": 1,
+    "postcode": "12345",
+    "street": "The Best Street"
+  },
+  "age": 31,
+  "cars": [
+    {
+      "brand": "Ferrari",
+      "maxSpeedKmH": 339,
+      "model": "SF90 Stradale"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-11T10:14:10.064Z"
+  },
+  "firstName": "Maxime",
+  "insurance": true,
+  "lastName": "Beugnet"
+},{
+  "_id": {
+    "$oid": "5ffd53aa7f84fd2370baaa65"
+  },
+  "address": {
+    "city": "string",
+    "country": "string",
+    "number": 0,
+    "postcode": "string",
+    "street": "string"
+  },
+  "age": 0,
+  "cars": [
+    {
+      "brand": "string",
+      "maxSpeedKmH": 0,
+      "model": "string"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-12T07:16:30.834Z"
+  },
+  "firstName": "string",
+  "insurance": true,
+  "lastName": "string"
+},{
+  "_id": {
+    "$oid": "5ffd53e57f84fd2370baaa67"
+  },
+  "address": {
+    "city": "mnaco",
+    "country": "string",
+    "number": 0,
+    "postcode": "string",
+    "street": "string"
+  },
+  "age": 0,
+  "cars": [
+    {
+      "brand": "string",
+      "maxSpeedKmH": 0,
+      "model": "string"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-12T07:16:30.834Z"
+  },
+  "firstName": "Jon",
+  "insurance": true,
+  "lastName": "string"
+},{
+  "_id": {
+    "$oid": "5ffd59c309f3d42570e2b2eb"
+  },
+  "address": {
+    "city": "Paris",
+    "country": "France",
+    "number": 1,
+    "postcode": "12345",
+    "street": "The Best Street"
+  },
+  "age": 32,
+  "cars": [
+    {
+      "brand": "Ferrari",
+      "maxSpeedKmH": 339,
+      "model": "SF90 Stradale"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-12T08:11:47.740Z"
+  },
+  "firstName": "Maxime",
+  "insurance": false,
+  "lastName": "Beugnet"
+},{
+  "_id": {
+    "$oid": "5ffd59c309f3d42570e2b2ec"
+  },
+  "address": {
+    "city": "Toulouse",
+    "country": "France",
+    "number": 2,
+    "postcode": "54321",
+    "street": "Another Street"
+  },
+  "age": 27,
+  "cars": [
+    {
+      "brand": "Mercedes",
+      "maxSpeedKmH": 355,
+      "model": "Project One"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-12T08:11:47.845Z"
+  },
+  "firstName": "Alex",
+  "insurance": false,
+  "lastName": "Beugnet"
+},{
+  "_id": {
+    "$oid": "5ffd59c309f3d42570e2b2ed"
+  },
+  "address": {
+    "city": "Paris",
+    "country": "France",
+    "number": 1,
+    "postcode": "12345",
+    "street": "The Best Street"
+  },
+  "age": 31,
+  "cars": [
+    {
+      "brand": "Ferrari",
+      "maxSpeedKmH": 339,
+      "model": "SF90 Stradale"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-12T08:11:47.855Z"
+  },
+  "firstName": "Maxime",
+  "insurance": true,
+  "lastName": "Beugnet"
+},{
+  "_id": {
+    "$oid": "5ffda027c88da57548e94a67"
+  },
+  "address": {
+    "city": "string",
+    "country": "string",
+    "number": 0,
+    "postcode": "string",
+    "street": "string"
+  },
+  "age": 0,
+  "cars": [
+    {
+      "brand": "string",
+      "maxSpeedKmH": 0,
+      "model": "string"
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-01-12T12:18:17.397Z"
+  },
+  "firstName": "string",
+  "insurance": true,
+  "lastName": "string"
+}]
