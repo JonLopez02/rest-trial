@@ -1,13 +1,13 @@
 use trivia
 db.createCollection("user")
-db.createCollection("questions")
+db.createCollection("question")
 db.user.insert({
 	"role": "Admin",
 	"name": "TPY",
 	"points": 0
 })
 
-db.questions.insertMany([
+db.question.insertMany([
 {
       "category": "Science & Nature",
       "type": "multiple",
