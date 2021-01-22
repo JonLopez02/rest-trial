@@ -2,15 +2,15 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="jumbotron">
+        <h1>QUESTED</h1>
+        <p class="lead">Quested is a trivia game with different categories, its is used with ASP.NET, that use Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Ikusi gehiago &raquo;</a></p>
+    </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2 >Getting started</h2>
         <p>
             ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
             enables a clean separation of concerns and gives you full control over markup
@@ -18,19 +18,19 @@
         </p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <div style="" class="col-md-4">
         <h2>Get more libraries</h2>
         <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <div style="" class="col-md-4">
         <h2>Web Hosting</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
 
-@model IEnumerable<Consuming_ASP.NET.Models.Quested>
+@model IEnumerable<Consuming_ASP.NET.Models.Questions>
 
 
 <p>
@@ -40,47 +40,57 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.question_id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Type)
+            @Html.DisplayNameFor(model => model.category)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Difficulty)
+            @Html.DisplayNameFor(model => model.type)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Question)
+            @Html.DisplayNameFor(model => model.difficulty)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CorrectAnswer)
+            @Html.DisplayNameFor(model => model.question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correct_answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incorrect_answers)
         </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Difficulty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Question)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CorrectAnswer)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.question_id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.category)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.question)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.difficulty)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.correct_answer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.incorrect_answers)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
     }
 
 </table>

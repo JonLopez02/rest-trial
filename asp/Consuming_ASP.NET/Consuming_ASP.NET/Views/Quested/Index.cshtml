@@ -1,58 +1,19 @@
-﻿@model IEnumerable<Consuming_ASP.NET.Models.Quested>
-
+﻿
 @{
     ViewBag.Title = "Index";
 }
+<div class="container row loginregister">
+    <div class="container col-lg-1 btn ">@Html.ActionLink("Login", "Login"@*, "", null, new { @class = "btn" }*@)</div>
+    <div class="container col-lg-1 btn ">@Html.ActionLink("Register", "Register")</div>
+</div>
 
-<h2>View</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Difficulty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Question)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CorrectAnswer)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Difficulty)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Question)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CorrectAnswer)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="container gorputza row">
+    <h1 class="zootopia" style="margin-left: 10%;
+        letter-spacing: 10px;
+        margin-top: 10%;
+        font-size: 1000%;
+        color: #1789DF;
+        text-shadow: 7px 10px 45px gray;">QUESTED</h1>
+    <div class="btn" style="margin-left: 33%; padding: 2%; font-size: 150%; margin-top: 10%">@Html.ActionLink("LOGIN AND PLAY", "Login")</div>
+</div>
 

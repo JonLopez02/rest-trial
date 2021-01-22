@@ -1,0 +1,33 @@
+﻿@model Consuming_ASP.NET.Models.User
+
+@{
+    ViewBag.Title = "Register";
+}
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-vertical center" style="margin-left: 35%; margin-top:15%">
+    <h2 class="zootopia" style="color: #1789DF">REGISTER</h2>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" style="padding-right: 45%">
+            <div class="row padding" style="margin-left: -53%"><input class="zootopia" type="text" placeholder="Username" /></div>
+            <div class="row padding" style="margin-left: -53%"><input class="zootopia" type="password" placeholder="Password" /></div>
+            <div class="row padding" style="margin-left: -53%"><input class="zootopia" type="password" placeholder="Repeat your password" /></div>
+            <div class="row padding" style="margin-left: -53%"><input class="btn input" type="submit" value="Create" class="btn" style=" margin-left:25px" /></div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="bottom">
+        @Html.ActionLink("Back to Menu", "Index")
+    </div>
+</div>
+}

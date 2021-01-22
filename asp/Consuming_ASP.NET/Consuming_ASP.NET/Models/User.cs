@@ -8,9 +8,18 @@ namespace Consuming_ASP.NET.Models
 
     public class User
     {
-        private string id;
-        private string username;
-        private string password;
-        private string status;
+        public string id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
+        public string name { get; set;  }
+        public string surname { get; set; }
+        public string status { get; set; }
+
+        public static bool login(string username, string password)
+        {
+            //var credential = MongoCredential.CreateMongoCRCredential("test", "user1", "password1");
+            return true;
+        }
     }
 }

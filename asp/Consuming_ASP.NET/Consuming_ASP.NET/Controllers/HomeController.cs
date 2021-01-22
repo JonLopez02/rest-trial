@@ -16,7 +16,7 @@ namespace Consuming_ASP.NET.Controllers
 
         public async System.Threading.Tasks.Task<ActionResult> Index()
         {
-            List<Quested> quested = new List<Quested>();
+            List<Questions> pList = new List<Questions>();
             using (var client = new HttpClient())
             {
                 //Passing service base url  
@@ -27,7 +27,7 @@ namespace Consuming_ASP.NET.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                HttpResponseMessage Res = await client.GetAsync("?age=25");
+                HttpResponseMessage Res = await client.GetAsync("api/questions");
 
                 //Checking the response is successful or not which is sent using HttpClient  
                 if (Res.IsSuccessStatusCode)
@@ -36,9 +36,9 @@ namespace Consuming_ASP.NET.Controllers
                     var EmpResponse = Res.Content.ReadAsStringAsync().Result;
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
-                    quested = JsonConvert.DeserializeObject<List<Quested>>(EmpResponse);
+                    pList = JsonConvert.DeserializeObject<List<Questions>>(EmpResponse);
                 }
-                return View(quested);
+                return View(pList);
             }
         }
 

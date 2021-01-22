@@ -265,7 +265,7 @@ th {
 }
 @font-face {
   font-family: "Zootopia";
-  src: url(../Content/ZootopiaJposterscomar-qJ80.ttf);
+  src: url(../Content/fonts/zootopia/zootopiajposterscomar-qj80-webfont.woff)
   src: url("../fonts/glyphicons-halflings-regular.eot");
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
@@ -1582,6 +1582,7 @@ pre code {
   overflow-y: scroll;
 }
 .container {
+    width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -4352,8 +4353,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 26px;
   line-height: 20px;
+
 }
 .navbar-brand:hover,
 .navbar-brand:focus {

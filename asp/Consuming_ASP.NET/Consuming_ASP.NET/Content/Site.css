@@ -20,5 +20,76 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 180px;
+    min-width: 100px;
+    resize: none;
 }
+.zootopia {
+    font: zootopia;
+}
+.loginregister{
+    margin-left: 1100px;
+}
+.gorputza{
+    margin-top:300px;
+    margin: auto;
+}
+.btn {
+    border: solid;
+    border-radius: 25px;
+    border-color: #1789DF;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: white;
+    margin: 5px;
+}
+    .btn:hover {
+        transition: 150ms;
+        color: black;
+        background-color: #1789DF;
+    }
+
+.padding{
+    padding: 6px
+}   
+
+.center{
+    margin-left: 23%;
+    margin-top: 17%;
+}
+
+.element-align {
+    position: fixed;
+    bottom: 0;
+}
+
+a {
+    color: #1789DF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.zootopia {
+    font-family: 'Zootopia', 'Zootopia JPosters.com.ar'
+}
+body {
+    background-image: url("images/fondoa.jpg");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: auto;
+    overflow-x: hidden;
+}
+.input {
+    color: #1789DF;
+}
+    .input:hover {
+        transition: 150ms;
+        color: white;
+        background-color: #1789DF;
+    }
