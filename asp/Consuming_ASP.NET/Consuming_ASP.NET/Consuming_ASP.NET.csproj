@@ -127,8 +127,7 @@
     </Compile>
     <Compile Include="Models\Questions.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\Quested.cs" />
-    <Compile Include="Models\Score.cs" />
+    <Compile Include="Models\HighScore.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -298,6 +297,7 @@
     <Content Include="Views\Quested\Register.cshtml" />
     <Content Include="Views\Quested\Login.cshtml" />
     <Content Include="Views\Quested\Score.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

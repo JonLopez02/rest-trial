@@ -13,7 +13,7 @@ namespace Consuming_ASP.NET.Models
         public string difficulty { get; set; }
         public string question { get; set; }
         public string correct_answer { get; set; }
-        public string[] incorrect_answers { get; set; }
+        public List<String> incorrect_answers { get; set; }
 
     }
 }

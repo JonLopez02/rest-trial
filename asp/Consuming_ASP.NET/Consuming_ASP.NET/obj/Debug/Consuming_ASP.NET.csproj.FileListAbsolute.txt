@@ -169,3 +169,4 @@ C:\Users\ferrero.sergio\source\repos\rest-trial\asp\Consuming_ASP.NET\Consuming_
 C:\Users\ferrero.sergio\source\repos\rest-trial\asp\Consuming_ASP.NET\Consuming_ASP.NET\obj\Debug\Consuming_ASP.NET.csproj.CopyComplete
 C:\Users\ferrero.sergio\source\repos\rest-trial\asp\Consuming_ASP.NET\Consuming_ASP.NET\obj\Debug\Consuming_ASP.NET.dll
 C:\Users\ferrero.sergio\source\repos\rest-trial\asp\Consuming_ASP.NET\Consuming_ASP.NET\obj\Debug\Consuming_ASP.NET.pdb
+C:\Users\ferrero.sergio\source\repos\rest-trial\asp\Consuming_ASP.NET\Consuming_ASP.NET\obj\Debug\Consuming_ASP.NET.csprojAssemblyReference.cache

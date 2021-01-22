@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Consuming_ASP.NET.Models.Score>
+﻿@model IEnumerable<Consuming_ASP.NET.Models.HighScore>
 
 @{
     ViewBag.Title = "Score";
@@ -12,34 +12,35 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Position)
+            @Html.DisplayNameFor(model => model.Score_Id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UserId)
+            @Html.DisplayNameFor(model => model.Score)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Points)
+            @Html.DisplayNameFor(model => model.Nickname)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Position)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Points)
-        </td>
-        <td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Score_Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Score)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nickname)
+    </td>
+
+    @*    <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+        </td> *@
+</tr>
 }
 
 </table>

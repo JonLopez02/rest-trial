@@ -14,9 +14,10 @@ namespace Consuming_ASP.NET.Controllers
     {
         private string ip = "http://192.168.72.2:8080";
         // GET: Quested
+        
         public async System.Threading.Tasks.Task<ActionResult> Index()
         {
-            /*List<Quested> quested = new List<Quested>();
+            List<Questions> quested = new List<Questions>();
             using (var client = new HttpClient())
             {
                 //Passing service base url  
@@ -36,12 +37,11 @@ namespace Consuming_ASP.NET.Controllers
                     var EmpResponse = Res.Content.ReadAsStringAsync().Result;
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
-                    quested = JsonConvert.DeserializeObject<List<Quested>>(EmpResponse);
+                    quested = JsonConvert.DeserializeObject<List<Questions>>(EmpResponse);
 
                 }
                 return View(quested);
-            }*/
-            return View();
+            }
         }
 
         // GET: Quested/Details/5
@@ -70,9 +70,10 @@ namespace Consuming_ASP.NET.Controllers
             return View();
         }
 
-        public async System.Threading.Tasks.Task<ActionResult> ScoreAsync(Score[] score)
+        public async System.Threading.Tasks.Task<ActionResult> Score(List<HighScore> score)
         {
-            List<Quested> quested = new List<Quested>();
+            //List<Score> quested = new List<Score>();
+            score = new List<HighScore>();
             using (var client = new HttpClient())
             {
                 //Passing service base url  
@@ -83,7 +84,7 @@ namespace Consuming_ASP.NET.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                HttpResponseMessage Res = await client.GetAsync("?age=25");
+                HttpResponseMessage Res = await client.GetAsync("api/scores");
 
                 //Checking the response is successful or not which is sent using HttpClient  
                 if (Res.IsSuccessStatusCode)
@@ -92,7 +93,8 @@ namespace Consuming_ASP.NET.Controllers
                     var EmpResponse = Res.Content.ReadAsStringAsync().Result;
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
-                    quested = JsonConvert.DeserializeObject<List<Quested>>(EmpResponse);
+                    //quested = JsonConvert.DeserializeObject<List<Score>>(EmpResponse);
+                    score = JsonConvert.DeserializeObject<List<HighScore>>(EmpResponse);
 
                 }
                 return View(score);
@@ -113,6 +115,11 @@ namespace Consuming_ASP.NET.Controllers
                 return View();
             }
         }
+
+        /*public ActionResult Score()
+        {
+            return View();
+        }*/
 
         // GET: Quested/Edit/5
         public ActionResult Edit(int id)
