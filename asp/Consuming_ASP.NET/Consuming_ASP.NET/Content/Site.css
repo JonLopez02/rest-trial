@@ -24,16 +24,20 @@ textarea {
     min-width: 100px;
     resize: none;
 }
+
 .zootopia {
     font: zootopia;
 }
-.loginregister{
+
+.loginregister {
     margin-left: 1100px;
 }
-.gorputza{
-    margin-top:300px;
+
+.gorputza {
+    margin-top: 300px;
     margin: auto;
 }
+
 .btn {
     border: solid;
     border-radius: 25px;
@@ -45,17 +49,18 @@ textarea {
     background-color: white;
     margin: 5px;
 }
+
     .btn:hover {
         transition: 150ms;
         color: black;
         background-color: #1789DF;
     }
 
-.padding{
+.padding {
     padding: 6px
-}   
+}
 
-.center{
+.center {
     margin-left: 23%;
     margin-top: 17%;
 }
@@ -70,14 +75,16 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: white;
-    text-decoration: none;
-}
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
 
 .zootopia {
-    font-family: 'Zootopia', 'Zootopia JPosters.com.ar'
+    font-family: 'Zootopia', 'Zootopia JPosters.com.ar';
+    font-weight: normal;
 }
+
 body {
     background-image: url("images/fondoa.jpg");
     background-repeat: repeat-y;
@@ -85,9 +92,11 @@ body {
     background-size: auto;
     overflow-x: hidden;
 }
+
 .input {
     color: #1789DF;
 }
+
     .input:hover {
         transition: 150ms;
         color: white;
@@ -106,4 +115,19 @@ body {
     font-weight: bold;
     font-size: 500%;
     padding: 10px;
+}
+
+.block {
+    background-color: #1789DF;
+    border: solid;
+    border-radius: 25px;
+    border-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin: 25px;
+    min-height: 800%;
+    color: white;
+    padding: 10px;
+    width: 45%;
+    margin-left: 20%;
+    margin-top:8%;
 }

@@ -1,4 +1,6 @@
 ﻿using Consuming_ASP.NET.Models;
+using Consuming_ASP.NET.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -17,6 +19,8 @@ namespace Consuming_ASP.NET.Controllers
     {
         private string ip = "http://192.168.72.2:8080";
         // GET: Quested
+        private readonly Service _questionsService;
+        [System.Web.Mvc.Route("api/questions")]
 
         public async System.Threading.Tasks.Task<ActionResult> Index()
         {
@@ -58,7 +62,7 @@ namespace Consuming_ASP.NET.Controllers
             return View();
             //var credential = MongoCredential.
         }
-        public ActionResult Login(FormCollection collection)
+        public ActionResult Login(System.Web.Mvc.FormCollection collection)
         {
             try
             {
@@ -100,21 +104,22 @@ namespace Consuming_ASP.NET.Controllers
             }
         }
         // POST: Quested/Create
-        [Microsoft.AspNetCore.Mvc.HttpPost]
-        public ActionResult Create(FormCollection collection)
+        /*[Microsoft.AspNetCore.Mvc.HttpPost]
+        public async Task<ActionResult<Questions>> Create([FromBody] Questions s)
         {
             try
             {
                 // TODO: Add insert logic here
 
+                await _questionsService.Create(s);
+                return Microsoft.AspNetCore.Mvc.CreatedAtRoute("Get", new { id = s.question_id.ToString() }, s);
 
-                return RedirectToAction("Index");
             }
             catch
             {
                 return View();
             }
-        }
+        }*/
 
         /*public ActionResult Score()
         {
@@ -129,7 +134,7 @@ namespace Consuming_ASP.NET.Controllers
 
         // POST: Quested/Edit/5
         [Microsoft.AspNetCore.Mvc.HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, System.Web.Mvc.FormCollection collection)
         {
             try
             {
@@ -151,7 +156,7 @@ namespace Consuming_ASP.NET.Controllers
 
         // POST: Quested/Delete/5
         [Microsoft.AspNetCore.Mvc.HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, System.Web.Mvc.FormCollection collection)
         {
             try
             {
