@@ -129,5 +129,62 @@ body {
     padding: 10px;
     width: 45%;
     margin-left: 20%;
-    margin-top:8%;
+    margin-top: 8%;
+}
+
+.info {
+    font-size: 115%;
+    font-weight: bold;
+    color: #1789DF;
+    margin-left: 1%;
+}
+
+.time {
+    border: solid;
+    border-color: #1789DF;
+    background-color: #1789DF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    padding-top: 7px;
+    padding-left: -50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.points {
+    border: solid;
+    border-color: #1789DF;
+    color: #1789DF;
+    font-size: 300%;
+    display: inline-block;
+    width: 8%;
+    margin-left: 24%;
+    padding: 10px;
+    margin-top: -1%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.question {
+    border: solid;
+    border-color: #1789DF;
+    border-radius: 30px;
+    text-align: center;
+    height: 20%;
+    width: 70%;
+    margin: 20px;
+    padding: 10px;
+    color: #1789DF;
+    font-weight: bold;
+    font-size: 200%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.answer{
+    width: 30%;
+    margin-left: 5%;
 }

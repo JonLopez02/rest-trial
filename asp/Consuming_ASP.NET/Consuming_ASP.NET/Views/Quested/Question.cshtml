@@ -1,0 +1,57 @@
+﻿@model Consuming_ASP.NET.Models.Questions
+
+@{
+    ViewBag.Title = "Question";
+}
+@*@model IEnumerable<Consuming_ASP.NET.Models.Questions>*@
+
+<div class="container" style="margin-top: 10%; margin-left: 10%">
+    <div class="row">
+        <div class="col-lg-4 info">Cultura general<br />Logica<br />Dificil</div>
+        <div class="col-lg-4 time">
+
+            <p id="secs" style="margin-top:-10%; margin-left: -25%; text-align: center;"></p>
+            <script>
+                // The data/time we want to countdown to
+                var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+                //var countDownDate = new Date(Date.now.seconds + 30).getTime();
+                var timeleft = 31000;
+                // Run myfunc every second
+                var myfunc = setInterval(function () {
+
+                    var now = new Date().getTime();
+                    timeleft -= 1000;
+
+                    // Calculating the days, hours, minutes and seconds left
+                    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+                    // Result is output to the specific element
+                    document.getElementById("secs").innerHTML = seconds
+
+                    // Display the message when countdown is over
+                    if (timeleft < 0) {
+                        clearInterval(myfunc);
+                        document.getElementById("secs").innerHTML = ""
+                    }
+                }, 1000);
+            </script>
+        </div>
+        <div class="col-lg-4 points">420</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 question">Quien es el mejor tonto de clase? </div>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-6 btn answer">A. Markel</div>
+            <div class="col-lg-6 btn answer">B. Markel</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 btn answer">C. Alvaro</div>
+            <div class="col-lg-6 btn answer">D. Joseba</div>
+        </div>
+    </div>
+</div>
+<div class="bottom btn zootopia" style="margin-left: 100%; margin-top: -66%">
+    @Html.ActionLink("Back to Menu", "Index")
+</div>

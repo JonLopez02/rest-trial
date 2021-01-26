@@ -471,6 +471,7 @@
     <Content Include="Views\Quested\Login.cshtml" />
     <Content Include="Views\Quested\Score.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Quested\Question.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

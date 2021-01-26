@@ -62,6 +62,12 @@ namespace Consuming_ASP.NET.Controllers
             return View();
             //var credential = MongoCredential.
         }
+        public ActionResult Question()
+        {
+            return View();
+        }
+
+
         public ActionResult Login(System.Web.Mvc.FormCollection collection)
         {
             try

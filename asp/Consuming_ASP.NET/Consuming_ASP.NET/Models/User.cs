@@ -14,7 +14,9 @@ namespace Consuming_ASP.NET.Models
         public string email { get; set; }
         public string name { get; set;  }
         public string surname { get; set; }
-        public string status { get; set; }
+        public string role { get; set; }
+        public string highscore { get; set; }
+
 
         public static bool login(string username, string password)
         {
