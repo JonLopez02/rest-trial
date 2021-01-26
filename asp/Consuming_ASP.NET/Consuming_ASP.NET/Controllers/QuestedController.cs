@@ -1,12 +1,15 @@
 ﻿using Consuming_ASP.NET.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using ActionResult = System.Web.Mvc.ActionResult;
 
 namespace Consuming_ASP.NET.Controllers
 {
@@ -14,14 +17,14 @@ namespace Consuming_ASP.NET.Controllers
     {
         private string ip = "http://192.168.72.2:8080";
         // GET: Quested
-        
+
         public async System.Threading.Tasks.Task<ActionResult> Index()
         {
             List<Questions> quested = new List<Questions>();
             using (var client = new HttpClient())
             {
                 //Passing service base url  
-                client.BaseAddress = new Uri(ip);   
+                client.BaseAddress = new Uri(ip);
 
                 client.DefaultRequestHeaders.Clear();
                 //Define request data format  
@@ -50,11 +53,6 @@ namespace Consuming_ASP.NET.Controllers
             return View();
         }
 
-        // GET: Quested/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
         public ActionResult Register()
         {
             return View();
@@ -66,7 +64,8 @@ namespace Consuming_ASP.NET.Controllers
             {
                 String username = collection["username"];
                 String password = collection["password"];
-            } catch { }
+            }
+            catch { }
             return View();
         }
 
@@ -84,7 +83,7 @@ namespace Consuming_ASP.NET.Controllers
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 //Sending request to find web api REST service resource GetAllEmployees using HttpClient  
-                HttpResponseMessage Res = await client.GetAsync("api/scores");
+                HttpResponseMessage Res = await client.GetAsync("api/scores/top");
 
                 //Checking the response is successful or not which is sent using HttpClient  
                 if (Res.IsSuccessStatusCode)
@@ -101,12 +100,13 @@ namespace Consuming_ASP.NET.Controllers
             }
         }
         // POST: Quested/Create
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public ActionResult Create(FormCollection collection)
         {
             try
             {
                 // TODO: Add insert logic here
+
 
                 return RedirectToAction("Index");
             }
@@ -128,7 +128,7 @@ namespace Consuming_ASP.NET.Controllers
         }
 
         // POST: Quested/Edit/5
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
             try
@@ -150,7 +150,7 @@ namespace Consuming_ASP.NET.Controllers
         }
 
         // POST: Quested/Delete/5
-        [HttpPost]
+        [Microsoft.AspNetCore.Mvc.HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
             try

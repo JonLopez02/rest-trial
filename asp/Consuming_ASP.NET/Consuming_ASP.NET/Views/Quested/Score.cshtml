@@ -4,43 +4,32 @@
     ViewBag.Title = "Score";
 }
 
-<h2>HighScores</h2>
+<div class="bottom btn zootopia" style="margin-left: 90%">
+    @Html.ActionLink("Back to Menu", "Index")
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Score_Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Score)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nickname)
-        </th>
-        <th></th>
-    </tr>
+<div class="container row">
+    <h2 class="zootopia" style="margin-left:20%; color: #1789DF; font-size: 800%; text-shadow: 7px 10px 45px gray;">HighScores</h2>
+    <br />
+    <br />
+</div>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Score_Id)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Score)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Nickname)
-    </td>
+@{int count = 1;}
 
-    @*    <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td> *@
-</tr>
+@foreach (var item in Model)
+{
+    <div class="container row highschore-div">
+        <div class="container col-lg-2">
+            @count
+        </div>
+        <div class="container col-lg-8 zootopia" style="margin-bottom: 1%">
+            @Html.DisplayFor(modelItem => item.Nickname)
+        </div>
+        <div class="container col-lg-2">
+            @Html.DisplayFor(modelItem => item.Score)
+        </div>
+        @{count++;}
+    </div>
 }
 
-</table>
+
